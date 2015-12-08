@@ -304,9 +304,9 @@ Class cocImage
 
 	public function loadImages() {
 
-		$this->tile = imagecreatefrompng( 'tile.png' );
-		$this->walls = imagecreatefrompng( 'images/walls.png' );
-		$this->building = imagecreatefrompng( 'images/buildings-sprite.png' );
+		$this->tile = imagecreatefrompng( 'img/tile.png' );
+		$this->walls = imagecreatefrompng( 'img/walls.png' );
+		$this->building = imagecreatefrompng( 'img/buildings-sprite.png' );
 
 		$this->createBackground();
 
@@ -314,13 +314,8 @@ Class cocImage
 
 	public function createBackground() {
 
-
-		// Tiles Image 40*40px
-		$this->tiles = imagecreatefromjpeg( 'tiles.jpg' );
-
-		// Center point 10*10px
-		$this->middle = imagecreatefromjpeg( 'tile_center.jpg' );
-
+		$this->tiles = imagecreatefromjpeg( 'img/tiles.jpg' );
+		$this->middle = imagecreatefromjpeg( 'img/tile_center.jpg' );
 		$this->background = imagecreatetruecolor( $this->sizeX * 20, $this->sizeY * 20 ) ;
 
 		imagesettile( $this->background, $this->tiles );
