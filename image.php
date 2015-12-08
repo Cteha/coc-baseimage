@@ -34,7 +34,7 @@ Class cocImage
 		$images = $this->loadImages(); 
 
 		foreach( json_decode( json_decode( $json )->player->village->json )->buildings as $value) {
-			$this->addItem( $value->data , $value->lvl, $value->x, $value->y );
+			$this->addItem( $value->data , $value->lvl + 1, $value->x, $value->y );
 		}
 
 		return $this->background;
