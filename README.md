@@ -7,7 +7,8 @@ Base Layout Image using PHP GD Librarys (created trough village json)
 Usage:
 
     $map = new cocImage();
-    $image = $map->showMap( "..json here.." );
+    $json = file_get_contents('http://...API..?id=xxx&home=xxx');
+    $image = $map->showMap( $json );
 
     // Render the image directly
     $result = $map->renderImage($image);
