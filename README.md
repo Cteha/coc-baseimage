@@ -19,6 +19,9 @@ Usage:
     
 
 - [x] All Buildings
-- [ ] JSON support
+- [X] JSON support
 - [ ] Examples
 - [ ] Documentation
+
+## Preview
+![Base Preview](http://fs5.directupload.net/images/151208/336rm75m.png)
