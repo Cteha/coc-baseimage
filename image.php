@@ -75,14 +75,14 @@ Class cocImage
 			case array( 1000007, 8 ): $result = [ 3, $posX, $posY, 726, 116, 70 ]; break;
 
 			// Army Camp - 1000000
-			case array( 1000000, 1 ): $result = [ 4, $posX, $posY, 12, 190, 100 ]; break;
-			case array( 1000000, 2 ): $result = [ 4, $posX, $posY, 140, 194, 100 ]; break;
-			case array( 1000000, 3 ): $result = [ 4, $posX, $posY, 268, 194, 100 ]; break;
-			case array( 1000000, 4 ): $result = [ 4, $posX, $posY, 398, 194, 100 ]; break;
-			case array( 1000000, 5 ): $result = [ 4, $posX, $posY, 528, 194, 100 ]; break;
-			case array( 1000000, 6 ): $result = [ 4, $posX, $posY, 656, 194, 100 ]; break;
-			case array( 1000000, 7 ): $result = [ 4, $posX, $posY, 784, 190, 100 ]; break;
-			case array( 1000000, 8 ): $result = [ 4, $posX, $posY, 914, 190, 100 ]; break;
+			case array( 1000000, 1 ): $result = [ 5, $posX, $posY, 12, 190, 100 ]; break;
+			case array( 1000000, 2 ): $result = [ 5, $posX, $posY, 140, 194, 100 ]; break;
+			case array( 1000000, 3 ): $result = [ 5, $posX, $posY, 268, 194, 100 ]; break;
+			case array( 1000000, 4 ): $result = [ 5, $posX, $posY, 398, 194, 100 ]; break;
+			case array( 1000000, 5 ): $result = [ 5, $posX, $posY, 528, 194, 100 ]; break;
+			case array( 1000000, 6 ): $result = [ 5, $posX, $posY, 656, 194, 100 ]; break;
+			case array( 1000000, 7 ): $result = [ 5, $posX, $posY, 784, 190, 100 ]; break;
+			case array( 1000000, 8 ): $result = [ 5, $posX, $posY, 914, 190, 100 ]; break;
 
 			// Clan Castle - 1000014
 			case array( 1000014, 1 ): $result = [ 3, $posX, $posY, 0, 317, 80 ]; break;
@@ -187,9 +187,9 @@ Class cocImage
 			case array( 1000005, 11 ): $result = [ 3, $posX, $posY, 763, 900, 68 ]; break;
 
 			// Inferno Tower - 1000027
-			case array( 1000027, 1 ): $result = [ 3, $posX, $posY, 884, 900, 68 ]; break;
-			case array( 1000027, 2 ): $result = [ 3, $posX, $posY, 933, 899, 68 ]; break;
-			case array( 1000027, 3 ): $result = [ 3, $posX, $posY, 983, 898, 68 ]; break;
+			case array( 1000027, 1 ): $result = [ 2, $posX, $posY, 884, 900, 68 ]; break;
+			case array( 1000027, 2 ): $result = [ 2, $posX, $posY, 933, 899, 68 ]; break;
+			case array( 1000027, 3 ): $result = [ 2, $posX, $posY, 983, 898, 68 ]; break;
 
 			// Dark Barracks - 1000026
 			case array( 1000026, 1 ): $result = [ 3, $posX, $posY, 8, 1002, 60 ]; break;
