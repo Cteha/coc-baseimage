@@ -2,26 +2,27 @@
 
 ![CoC Logo](https://clashofclans.com/img/logo/l.png?t=1449169311)
 
-Base Layout Image using PHP GD Librarys (created trough village json)
+Base Layout Image Preview using PHP GD Library & village JSON
 
-## Usage:
+## Usage Example:
 
+    // Initialize
     $map = new cocImage();
-    $json = file_get_contents('http://...API..?id=xxx&home=xxx');
-    $image = $map->showMap( $json );
+    
+    // Define your API KEY
+    CONST _API_ = '..API URL..';
 
-    // Render the image directly
-    $result = $map->renderImage($image);
+    // Get the API JSON result
+    $json = @file_get_contents(_API_);
     
-    // Retrieve image base64 decoded
-    $result = $map->encodeImage($image);
+    // Receive the villageJson (change this depending on the API) 
+    $villageJson = @json_decode( @json_decode( $json )->player->village->json )->buildings;
     
-    
-## Upcoming
-- [x] All Buildings
-- [X] JSON support
-- [ ] Examples
-- [ ] Documentation
+    // Get the base64 encoded village image
+    $image = $map->showMap( $villageJson );
+
+    // Render the image
+    echo "<img src='$image' />";
 
 ## Preview
 ![Base Preview](http://fs5.directupload.net/images/151208/336rm75m.png)
