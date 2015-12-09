@@ -25,20 +25,25 @@ ini_set('display_errors', 'on');
 
 Class cocImage
 {
-	protected $sizeX = 40;
 	protected $sizeY = 40;
 	protected $tile, $tiles, $walls, $building, $background;
 
-	public function showMap( $json ) {
+    public function __construct()
+    {
+    	$this->sizeX = 40;
+    	$this->sizeY = 40;
+    	$this->path = getcwd();
+    }
+
+	public function showMap( $villageJson ) {
 
 		$images = $this->loadImages(); 
 
-		foreach( json_decode( json_decode( $json )->player->village->json )->buildings as $value) {
+		foreach( $villageJson as $value) {
 			$this->addItem( $value->data , $value->lvl + 1, $value->x, $value->y );
 		}
 
 		return $this->background;
-
 	}
 
 	public function addItem( $bid, $level, $x, $y ) {
@@ -326,18 +331,17 @@ Class cocImage
 
 	public function loadImages() {
 
-		$this->tile = imagecreatefrompng( 'img/tile.png' );
-		$this->walls = imagecreatefrompng( 'img/walls.png' );
-		$this->building = imagecreatefrompng( 'img/buildings-sprite.png' );
+		$this->tile = imagecreatefrompng( $this->path.'/img/tile.png' );
+		$this->walls = imagecreatefrompng( $this->path.'/img/walls.png' );
+		$this->building = imagecreatefrompng( $this->path.'/img/buildings-sprite.png' );
 
 		$this->createBackground();
-
 	}
 
 	public function createBackground() {
 
-		$this->tiles = imagecreatefromjpeg( 'img/tiles.jpg' );
-		$this->middle = imagecreatefromjpeg( 'img/tile_center.jpg' );
+		$this->tiles = imagecreatefromjpeg( $this->path.'/img/tiles.jpg' );
+		$this->middle = imagecreatefromjpeg( $this->path.'/img/tile_center.jpg' );
 		$this->background = imagecreatetruecolor( $this->sizeX * 20, $this->sizeY * 20 ) ;
 
 		imagesettile( $this->background, $this->tiles );
@@ -352,7 +356,7 @@ Class cocImage
 		$this->clearImages();
 	}
 
-	public function encodeImage( $image ) {
+	public function decodeImage( $image ) {
 
 		ob_start();
 		imagepng( $this->background );
