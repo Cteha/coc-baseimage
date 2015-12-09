@@ -31,14 +31,16 @@ Class cocImage
 		$this->path = getcwd();
 	}
 
-	public function showMap( $villageJson ) {
+	public function showMap( $villageJson, $filter = false, $filterVar = 0 ) {
 
 		$images = $this->loadImages(); 
 
 		foreach( $villageJson as $value) {
 			$this->addItem( $value->data , $value->lvl + 1, $value->x, $value->y );
 		}
-		
+
+		if( $filter !== false ) imagefilter( $this->background, $filter, $filterVar );
+
 		return $this->decodeImage( $this->background );
 	}
 
