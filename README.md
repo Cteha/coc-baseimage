@@ -24,8 +24,30 @@ Base Layout Image Preview using PHP GD Library & village JSON
     // Render the image
     echo "<img src='$image' />";
 
-## Preview
+## Map Preview
 ![Base Preview](http://fs5.directupload.net/images/151208/336rm75m.png)
+
+## Filter
+
+    // Example: Brightness Filter
+    $image = $map->showMap( $villageJson, IMG_FILTER_BRIGHTNESS, 100 );
+
+    // Example: Negate Filter
+    $image = $map->showMap( $villageJson, IMG_FILTER_NEGATE );
+
+NAME | VAR
+------------ | -------------
+IMG_FILTER_BRIGHTNESS | -255 to 255
+IMG_FILTER_CONTRAST | -255 to 255
+IMG_FILTER_GRAYSCALE | n/a
+IMG_FILTER_NEGATE | n/a
+IMG_FILTER_EDGEDETECT | n/a
+IMG_FILTER_EMBOSS | n/a
+IMG_FILTER_GAUSSIAN_BLUR | n/a
+IMG_FILTER_MEAN_REMOVAL | n/a
+IMG_FILTER_SMOOTH | n/a
+## Filter Preview
+![Filter Preview](http://fs5.directupload.net/images/151209/v2irortm.jpg)
 
 ## Dependencies
 PHP >5.4 & GDlib
