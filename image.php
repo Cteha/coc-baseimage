@@ -19,21 +19,17 @@
  * @author Cteha <github.com/Cteha>
  */
 
-error_reporting(-1);
-ini_set('display_errors', 'on');
-
-
 Class cocImage
 {
 	protected $sizeY = 40;
 	protected $tile, $tiles, $walls, $building, $background;
 
-    public function __construct()
-    {
-    	$this->sizeX = 40;
-    	$this->sizeY = 40;
-    	$this->path = getcwd();
-    }
+	public function __construct()
+	{
+		$this->sizeX = 40;
+		$this->sizeY = 40;
+		$this->path = getcwd();
+	}
 
 	public function showMap( $villageJson ) {
 
@@ -42,8 +38,8 @@ Class cocImage
 		foreach( $villageJson as $value) {
 			$this->addItem( $value->data , $value->lvl + 1, $value->x, $value->y );
 		}
-
-		return $this->background;
+		
+		return $this->decodeImage( $this->background );
 	}
 
 	public function addItem( $bid, $level, $x, $y ) {
@@ -347,13 +343,6 @@ Class cocImage
 		imagesettile( $this->background, $this->tiles );
 		imagefilledrectangle( $this->background, 0, 0, $this->sizeX * 20, $this->sizeY * 20, IMG_COLOR_TILED );
 		imageCopy( $this->background, $this->middle, $this->sizeX * 10 - 5, $this->sizeY * 10 - 5, 0, 0, 10, 10 ); 
-	}
-
-	public function renderImage( $image ) {
-		header( 'Content-Type: image/png' );
-		imagepng( $this->background );
-	
-		$this->clearImages();
 	}
 
 	public function decodeImage( $image ) {
