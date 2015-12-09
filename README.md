@@ -26,3 +26,6 @@ Base Layout Image Preview using PHP GD Library & village JSON
 
 ## Preview
 ![Base Preview](http://fs5.directupload.net/images/151208/336rm75m.png)
+
+## Dependencies
+PHP >5.4 & GDlib
