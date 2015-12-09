@@ -314,7 +314,7 @@ Class cocImage
 	
 		$image_size = $tiles * 20;
 
-		imageCopy( $this->background, $this->tile, $pX + 2, $pY + 2, 0, 0, $image_size - 4, $image_size - 4 );
+		imagecopyresized( $this->background, $this->tile, $pX + 2, $pY + 2, 0, 0, $image_size - 4, $image_size - 4, 80, 80);
 		imagecopyresized( $this->background, $this->building, $pX, $pY, $cX, $cY, $image_size, $image_size, $size, $size ); 
 
 	}
