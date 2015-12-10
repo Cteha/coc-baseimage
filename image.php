@@ -21,13 +21,12 @@
 
 Class cocImage
 {
-	protected $sizeY = 40;
 	protected $tile, $tiles, $walls, $building, $background;
 
 	public function __construct()
 	{
-		$this->sizeX = 40;
-		$this->sizeY = 40;
+		$this->sizeX = 44;
+		$this->sizeY = 44;
 		$this->path = getcwd();
 	}
 
